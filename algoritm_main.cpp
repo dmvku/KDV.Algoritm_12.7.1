@@ -12,14 +12,24 @@ int main()
 
 	std::cout << "Enter the text for analysis:\n";
 	std::string textString{};
-	std::cin >> textString;
+	std::cin >> textString;	
 	
-	std::cout << "Enter a number K: ";
-	size_t numberK{};
-	std::cin >> numberK;
+	int numberK{};	
+	
+	do
+	{
+		std::cout << "Enter a number K (K > 0): ";
+		std::cin >> numberK;
+		if (numberK <= 0)
+		{
+			std::cout << "The number K must be greater than zero... ";
+		}				
+	} while (numberK <= 0);
 
-	std::string isMultiple = checkMultiplicity(textString, numberK) ? "" : "not ";
+	size_t number{ static_cast<size_t>(numberK) };
 
-	std::cout << "String is " << isMultiple << "a multiple of a number " << numberK << "\n";
+	std::string isMultiple = checkMultiplicity(textString, number) ? "" : "n't";
+
+	std::cout << "String is" << isMultiple << " a multiple of a number " << numberK << "\n";
 	return 0;
 }
