@@ -28,7 +28,7 @@ int main()
 
 	size_t number{ static_cast<size_t>(numberK) };
 
-	std::string isMultiple = checkMultiplicity(textString, number) ? "" : "n't";
+	std::string isMultiple = isKPeriodic(textString, number) ? "" : "n't";
 
 	std::cout << "String is" << isMultiple << " a multiple of a number " << numberK << "\n";
 	return 0;

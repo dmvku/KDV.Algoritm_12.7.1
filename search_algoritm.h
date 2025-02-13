@@ -2,4 +2,4 @@
 #include <iostream>
 #include <string>
 
-bool checkMultiplicity(const std::string& textString, size_t numberK);
+bool isKPeriodic(const std::string& textString, size_t numberK);
