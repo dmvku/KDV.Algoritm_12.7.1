@@ -4,7 +4,7 @@ bool isKPeriodic(const std::string& textString, size_t numberK)
 {
 	size_t stringLength{ textString.size() };
 
-	if (stringLength < numberK || stringLength % numberK != 0)
+	if (stringLength % numberK != 0)
 	{
 		return false;
 	}
